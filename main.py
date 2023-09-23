@@ -146,6 +146,8 @@ def main():
                      "Count Total Books",
                      "List All Books",
                      "Display Books"
+                     "Get total books in the Library",
+                     "Get total books in a Bookshelf"
                      "Exit"]
         [print(f"{index + 1} {option}") for index, option in enumerate(selection)]
         choice = int(input("-> "))
@@ -168,7 +170,15 @@ def main():
             case 6:
                 display_books(library)
             case 7:
+                print(f"Total Books: {library.count_total_books()}")
+            case 8:
+                shelf_num = int(input("Enter Bookshelf Number: "))
+                bookshelf = library.find_bookshelf(shelf_num)
+                print(f"Total Books: {bookshelf.get_book_count()}")
+            case 9:
                 exit()
+            case _:
+                print("Invalid Choice")
 
 
 if __name__ == "__main__":
