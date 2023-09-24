@@ -145,9 +145,9 @@ def main():
                      "Search Book",
                      "Count Total Books",
                      "List All Books",
-                     "Display Books"
+                     "Display Books",
                      "Get total books in the Library",
-                     "Get total books in a Bookshelf"
+                     "Get total books in a Bookshelf",
                      "Exit"]
         [print(f"{index + 1} {option}") for index, option in enumerate(selection)]
         choice = int(input("-> "))
